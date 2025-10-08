@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trae Tu Auto</title>
+  <meta name="description" content="Asesoría en importación de autos clásicos y eléctricos. Trae Tu Auto - te ayudamos a importar desde Miami, Italia y España.">
+  <style>
+    :root{
+      --bg:#0b0b0b; /* negro profundo */
+      --card:#0f0f0f;
+      --accent:#d4af37; /* dorado */
+      --muted:#cfcfcf;
+      --white:#ffffff;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#070707 0%, #0d0d0d 100%);color:var(--white);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;border-bottom:1px solid rgba(255,255,255,0.04);position:sticky;top:0;background:linear-gradient(180deg, rgba(11,11,11,0.85), rgba(11,11,11,0.6));backdrop-filter: blur(6px);z-index:50}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffd966);display:flex;align-items:center;justify-content:center;color:#0b0b0b;font-weight:800;font-size:16px}
+    nav a{margin-left:18px;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:36px;align-items:center;padding:56px 32px}
+    .hero h1{font-size:40px;margin:0 0 12px 0;color:var(--white)}
+    .hero p{color:var(--muted);line-height:1.6}
+    .cta{margin-top:18px}
+    .btn{background:var(--accent);color:#0b0b0b;padding:12px 18px;border-radius:10px;font-weight:700;display:inline-block}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:28px 32px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 32px 40px}
+    .gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px}
+    section{padding:28px 0}
+    h2{margin:0 0 12px 0;color:var(--white)}
+    .conces{display:flex;gap:18px;flex-wrap:wrap}
+    .dealer{flex:1 1 220px;background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .dealer h3{margin:0 0 8px 0;color:var(--accent)}
+    footer{padding:24px 32px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center}
+    /* Contact form */
+    form{display:grid;gap:12px}
+    input,textarea,select{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:8px;color:var(--white);outline:none}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .full{grid-column:1/-1}
+    @media(max-width:920px){.hero{grid-template-columns:1fr;padding:28px 18px}.gallery{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+    @media(max-width:560px){.gallery{grid-template-columns:1fr}}
+    /* micro styles */
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.02);font-weight:700;color:var(--accent)}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">TTA</div>
+      <div>
+        <div style="font-weight:800">Trae Tu Auto</div>
+        <div class="small">Asesoría en importación · Clásicos · Eléctricos</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#concesionarias">Concesionarias</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div>
+        <div class="badge">Asesoría profesional</div>
+        <h1>Trae Tu Auto — Importamos con confianza</h1>
+        <p>
+          Somos una asesoría especializada en la <strong>importación de autos</strong>: desde clásicos que marcan historia hasta eléctricos e híbridos de última generación.
+          Nuestro equipo de profesionales se ocupa de cada etapa del proceso para que traigas el auto que querés, sin complicaciones.
+        </p>
+
+        <div style="margin-top:18px">
+          <h3 style="margin:0 0 8px 0;color:var(--accent)">Cómo trabajamos (breve)</h3>
+          <div style="color:var(--muted);line-height:1.6">
+            <ol style="padding-left:18px;margin:0">
+              <li>Evaluación inicial: revisamos el vehículo y su documentación.</li>
+              <li>Gestión de compra y logística: negociamos con concesionarias y organizamos transporte.</li>
+              <li>Trámites aduaneros y de homologación: nos encargamos de la documentación.</li>
+              <li>Entrega y soporte post-importación: te asesoramos en todo lo necesario.</li>
+            </ol>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:14px">Contamos con profesionales capacitados en comercio exterior, logística y mecánica especializada.</p>
+
+        <div class="cta"><a class="btn" href="#contacto">Consultá ahora</a></div>
+      </div>
+
+      <aside style="padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04)">
+        <h3 style="margin-top:0;color:var(--accent)">Nuestra propuesta</h3>
+        <p class="muted">Servicio integral para particulares y empresas: importación, logística y asesoría técnica. Especial foco en autos eléctricos y clásicos.</p>
+        <div style="margin-top:12px">
+          <strong class="small">Ubicaciones de trabajo:</strong>
+          <div class="small">Miami · Italia · España</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="concesionarias">
+      <div style="padding:0 32px">
+        <h2>Concesionarias y mercados donde trabajamos</h2>
+        <p class="muted">Trabajamos con concesionarias, brokers y contactos en los mercados más importantes. A continuación, listamos regiones y ejemplos de actores con los que solemos operar (todo mostrado a modo informativo).</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3 style="color:var(--accent);margin-top:0">Miami</h3>
+          <p class="muted">Amplio mercado de vehículos eléctricos y clásicos. Colaboramos con concesionarias y brokers especializados en exportación a LATAM.</p>
+          <ul class="small muted" style="padding-left:18px;margin:10px 0 0 0">
+            <li>Autos nuevos y seminuevos</li>
+            <li>Subastas y consignaciones</li>
+            <li>Gestión logística hacia Argentina</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--accent);margin-top:0">Italia</h3>
+          <p class="muted">Fuente principal de clásicos europeos y deportivos. Apoyamos en la verificación y transporte internacional.</p>
+          <ul class="small muted" style="padding-left:18px;margin:10px 0 0 0">
+            <li>Clásicos europeos</li>
+            <li>Homologación y documentación</li>
+            <li>Inspecciones técnicas</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--accent);margin-top:0">España</h3>
+          <p class="muted">Mercado variado con opciones de eléctricos, híbridos y clásicos. Coordinamos compras y transporte marítimo/terrestre.</p>
+          <ul class="small muted" style="padding-left:18px;margin:10px 0 0 0">
+            <li>Vehículos de flota e importación</li>
+            <li>Certificados y documentación EU</li>
+            <li>Asesoramiento en impuestos y aranceles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div style="padding:0 32px">
+        <h2>Galería — eléctricos · híbridos · clásicos</h2>
+        <p class="muted">Imágenes de referencia para mostrar el tipo de vehículos que trabajamos. Podés reemplazarlas luego con fotos propias.</p>
+      </div>
+
+      <div class="gallery" style="padding-top:12px">
+        <img src="https://images.unsplash.com/photo-1549921296-3f1f3e1b5f3b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c" alt="auto electrico">
+        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d5e6f" alt="auto clasico">
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7a8b9c" alt="auto híbrido">
+        <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc123" alt="auto electrico 2">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=def456" alt="auto clasico 2">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi789" alt="auto híbrido 2">
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div style="padding:0 32px">
+        <h2>Contacto</h2>
+        <p class="muted">Dejanos tu consulta y nos comunicamos a la brevedad.</p>
+
+        <!-- Formulario configurado con FormSubmit (servicio gratuito, requiere verificar el correo 1 vez) -->
+        <form action="https://formsubmit.co/traetuautos@gmail.com" method="POST">
+          <!-- Opcionales: personalizar asunto y redirección -->
+          <input type="hidden" name="_subject" value="Nueva consulta - Trae Tu Auto">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="row">
+            <input name="nombre" placeholder="Nombre" required>
+            <input name="apellido" placeholder="Apellido" required>
+          </div>
+
+          <div class="row">
+            <input name="email" type="email" placeholder="Correo electrónico" required>
+            <input name="telefono" placeholder="Número de teléfono">
+          </div>
+
+          <div class="row">
+            <input name="empresa" placeholder="Nombre de empresa / importador">
+            <select name="tienen_licencia">
+              <option value="">¿Cuentan con licencia de importación?</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <textarea name="consulta" rows="6" placeholder="Consulta" class="full" required></textarea>
+
+          <!-- Honey pot (campo oculto para bots) -->
+          <input type="text" name="_honey" style="display:none">
+
+          <div style="display:flex;gap:12px;align-items:center;margin-top:6px">
+            <button class="btn" type="submit">Enviar consulta</button>
+            <div class="small muted">Al enviar, recibirás un mail para confirmar (necesario la primera vez).</div>
+          </div>
+        </form>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">También podés escribirnos directamente a <strong>traetuautos@gmail.com</strong></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="small muted">© Trae Tu Auto · Asesoría en importación</div>
+    <div class="small muted">Diseñado por Julián · Paleta: negro · dorado · blanco</div>
+  </footer>
+
+  <!--
+    INSTRUCCIONES DE IMPLEMENTACIÓN (resumen rápido dentro del archivo):
+
+    1) Probar localmente:
+       - Guardar este archivo como "index.html" en una carpeta.
+       - Abrir en el navegador para ver la web.
+
+    2) Subir a GitHub y publicar con GitHub Pages (sin costo):
+       - Crear un repositorio en GitHub (nombre: trae-tu-auto o similar).
+       - Subir el archivo index.html a la rama "main" (o gh-pages si preferís).
+       - En Settings > Pages, seleccionar la rama "main" y carpeta "/ (root)". GitHub generará una URL tipo: https://<tuUsuario>.github.io/<repo>/
+
+    3) Conectar tu dominio de GoDaddy a GitHub Pages (resumen):
+       - En GitHub Pages, agregar tu dominio personalizado (ej: www.tudominio.com) en la sección de Pages.
+       - En GoDaddy, ir a DNS del dominio y crear 2 registros A que apunten a las IPs de GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) o seguir el flujo recomendado por GitHub.
+       - Agregar un registro CNAME para "www" apuntando a tuusuario.github.io (o al dominio de Pages que te da GitHub).
+       - Puede tardar hasta 24 horas en propagarse, aunque muchas veces es rápido.
+
+    4) Formulario que envía a traetuautos@gmail.com:
+       - El formulario usa https://formsubmit.co . La primera vez que alguien envíe, FormSubmit enviará un email a traetuautos@gmail.com para que verifiques y actives la recepción (hacé click en el link de verificación en ese email).
+       - Es gratis y no requiere backend propio.
+
+    5) Reemplazar imágenes por las tuyas:
+       - Simplemente cambia los src de las <img> en la sección Galería por los archivos que subas al repo (por ejemplo: /assets/mi-auto.jpg).
+
+    6) Sugerencia de pasos adicionales (opcionales):
+       - Usar GitHub Pages con branch principal y opción de /docs si preferís.
+       - Añadir archivo CNAME en el repo con tu dominio personalizado.
+       - Si querés que el formulario guarde en Google Sheets automáticamente, se puede integrar más adelante (requiere servicio extra o zapier/integrations).
+
+    --- FIN INSTRUCCIONES ---
+  -->
+
+</body>
+</html>
